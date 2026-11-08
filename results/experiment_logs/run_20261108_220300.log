@@ -1,0 +1,387 @@
+=== Experiments ===
+Bodies: 100 500 1000 5000 10000   Procs: 1 2 4 8   Steps: 100
+
+---- Sequential  bodies=100 ----
+Sequential N body simulation
+  bodies           : 100
+  steps            : 100
+  seed             : 42
+  compute time (s) : 0.00459813
+  total time (s)   : 0.00861114
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_seq_n100_s100.csv
+RESULT mode=sequential bodies=100 steps=100 seed=42 compute_s=0.00459813 total_s=0.00861114
+---- Sequential  bodies=500 ----
+Sequential N body simulation
+  bodies           : 500
+  steps            : 100
+  seed             : 42
+  compute time (s) : 0.0662663
+  total time (s)   : 0.0680181
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_seq_n500_s100.csv
+RESULT mode=sequential bodies=500 steps=100 seed=42 compute_s=0.0662663 total_s=0.0680181
+---- Sequential  bodies=1000 ----
+Sequential N body simulation
+  bodies           : 1000
+  steps            : 100
+  seed             : 42
+  compute time (s) : 0.337582
+  total time (s)   : 0.339841
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_seq_n1000_s100.csv
+RESULT mode=sequential bodies=1000 steps=100 seed=42 compute_s=0.337582 total_s=0.339841
+---- Sequential  bodies=5000 ----
+Sequential N body simulation
+  bodies           : 5000
+  steps            : 100
+  seed             : 42
+  compute time (s) : 6.6305
+  total time (s)   : 6.64293
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_seq_n5000_s100.csv
+RESULT mode=sequential bodies=5000 steps=100 seed=42 compute_s=6.6305 total_s=6.64293
+---- Sequential  bodies=10000 ----
+Sequential N body simulation
+  bodies           : 10000
+  steps            : 100
+  seed             : 42
+  compute time (s) : 29.9478
+  total time (s)   : 29.9742
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_seq_n10000_s100.csv
+RESULT mode=sequential bodies=10000 steps=100 seed=42 compute_s=29.9478 total_s=29.9742
+---- MPI  bodies=100  procs=1 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 1
+  bodies           : 100
+  steps            : 100
+  seed             : 42
+  compute time (s) : 0.0112936  (max over ranks)
+  comm time (s)    : 6.7897e-05  (max over ranks)
+  total time (s)   : 0.0113833  (max over ranks)
+  cpu time (s)     : 0.011379  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n100_p1_s100.csv
+RANK rank=0 bodies=100 compute_s=0.0112936 comm_s=6.7897e-05 cpu_s=0.011379
+RESULT mode=mpi procs=1 bodies=100 steps=100 seed=42 compute_s=0.0112936 comm_s=6.7897e-05 total_s=0.0113833 cpu_s=0.011379
+---- MPI  bodies=100  procs=2 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 2
+  bodies           : 100
+  steps            : 100
+  seed             : 42
+  compute time (s) : 0.0032721  (max over ranks)
+  comm time (s)    : 0.000901282  (max over ranks)
+  total time (s)   : 0.00392252  (max over ranks)
+  cpu time (s)     : 0.003924  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n100_p2_s100.csv
+RANK rank=0 bodies=50 compute_s=0.0032721 comm_s=0.000641055 cpu_s=0.003924
+RANK rank=1 bodies=50 compute_s=0.00301211 comm_s=0.000901282 cpu_s=0.003924
+RESULT mode=mpi procs=2 bodies=100 steps=100 seed=42 compute_s=0.0032721 comm_s=0.000901282 total_s=0.00392252 cpu_s=0.003924
+---- MPI  bodies=100  procs=4 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 4
+  bodies           : 100
+  steps            : 100
+  seed             : 42
+  compute time (s) : 0.00159331  (max over ranks)
+  comm time (s)    : 0.0163927  (max over ranks)
+  total time (s)   : 0.0171759  (max over ranks)
+  cpu time (s)     : 0.017171  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n100_p4_s100.csv
+RANK rank=0 bodies=25 compute_s=0.00118906 comm_s=0.0159753 cpu_s=0.017171
+RANK rank=1 bodies=25 compute_s=0.00121697 comm_s=0.0159456 cpu_s=0.017171
+RANK rank=2 bodies=25 compute_s=0.00159331 comm_s=0.0155688 cpu_s=0.017171
+RANK rank=3 bodies=25 compute_s=0.000766747 comm_s=0.0163927 cpu_s=0.01717
+RESULT mode=mpi procs=4 bodies=100 steps=100 seed=42 compute_s=0.00159331 comm_s=0.0163927 total_s=0.0171759 cpu_s=0.017171
+---- MPI  bodies=100  procs=8 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 8
+  bodies           : 100
+  steps            : 100
+  seed             : 42
+  compute time (s) : 0.00101255  (max over ranks)
+  comm time (s)    : 0.00538883  (max over ranks)
+  total time (s)   : 0.00595572  (max over ranks)
+  cpu time (s)     : 0.005954  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n100_p8_s100.csv
+RANK rank=0 bodies=13 compute_s=0.00100784 comm_s=0.00492846 cpu_s=0.005952
+RANK rank=1 bodies=13 compute_s=0.000900561 comm_s=0.00499045 cpu_s=0.005906
+RANK rank=2 bodies=13 compute_s=0.000732253 comm_s=0.005199 cpu_s=0.005942
+RANK rank=3 bodies=13 compute_s=0.00101255 comm_s=0.00488683 cpu_s=0.005909
+RANK rank=4 bodies=12 compute_s=0.000926567 comm_s=0.00501858 cpu_s=0.005954
+RANK rank=5 bodies=12 compute_s=0.000903482 comm_s=0.00498955 cpu_s=0.005906
+RANK rank=6 bodies=12 compute_s=0.000926572 comm_s=0.00499547 cpu_s=0.005934
+RANK rank=7 bodies=12 compute_s=0.000515171 comm_s=0.00538883 cpu_s=0.005917
+RESULT mode=mpi procs=8 bodies=100 steps=100 seed=42 compute_s=0.00101255 comm_s=0.00538883 total_s=0.00595572 cpu_s=0.005954
+---- MPI  bodies=500  procs=1 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 1
+  bodies           : 500
+  steps            : 100
+  seed             : 42
+  compute time (s) : 0.0856302  (max over ranks)
+  comm time (s)    : 0.000136403  (max over ranks)
+  total time (s)   : 0.0857758  (max over ranks)
+  cpu time (s)     : 0.085695  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n500_p1_s100.csv
+RANK rank=0 bodies=500 compute_s=0.0856302 comm_s=0.000136403 cpu_s=0.085695
+RESULT mode=mpi procs=1 bodies=500 steps=100 seed=42 compute_s=0.0856302 comm_s=0.000136403 total_s=0.0857758 cpu_s=0.085695
+---- MPI  bodies=500  procs=2 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 2
+  bodies           : 500
+  steps            : 100
+  seed             : 42
+  compute time (s) : 0.0383741  (max over ranks)
+  comm time (s)    : 0.00126302  (max over ranks)
+  total time (s)   : 0.0392086  (max over ranks)
+  cpu time (s)     : 0.039208  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n500_p2_s100.csv
+RANK rank=0 bodies=250 compute_s=0.0383741 comm_s=0.000824305 cpu_s=0.039208
+RANK rank=1 bodies=250 compute_s=0.0379339 comm_s=0.00126302 cpu_s=0.039207
+RESULT mode=mpi procs=2 bodies=500 steps=100 seed=42 compute_s=0.0383741 comm_s=0.00126302 total_s=0.0392086 cpu_s=0.039208
+---- MPI  bodies=500  procs=4 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 4
+  bodies           : 500
+  steps            : 100
+  seed             : 42
+  compute time (s) : 0.032205  (max over ranks)
+  comm time (s)    : 0.00361908  (max over ranks)
+  total time (s)   : 0.0343722  (max over ranks)
+  cpu time (s)     : 0.034371  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n500_p4_s100.csv
+RANK rank=0 bodies=125 compute_s=0.0307453 comm_s=0.00361908 cpu_s=0.034322
+RANK rank=1 bodies=125 compute_s=0.0309102 comm_s=0.0034544 cpu_s=0.034371
+RANK rank=2 bodies=125 compute_s=0.032205 comm_s=0.00215788 cpu_s=0.034369
+RANK rank=3 bodies=125 compute_s=0.0307487 comm_s=0.00361352 cpu_s=0.034369
+RESULT mode=mpi procs=4 bodies=500 steps=100 seed=42 compute_s=0.032205 comm_s=0.00361908 total_s=0.0343722 cpu_s=0.034371
+---- MPI  bodies=500  procs=8 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 8
+  bodies           : 500
+  steps            : 100
+  seed             : 42
+  compute time (s) : 0.0241841  (max over ranks)
+  comm time (s)    : 0.0153251  (max over ranks)
+  total time (s)   : 0.0309514  (max over ranks)
+  cpu time (s)     : 0.030952  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n500_p8_s100.csv
+RANK rank=0 bodies=63 compute_s=0.0226227 comm_s=0.00824495 cpu_s=0.030877
+RANK rank=1 bodies=63 compute_s=0.0241841 comm_s=0.00675505 cpu_s=0.030893
+RANK rank=2 bodies=63 compute_s=0.0219774 comm_s=0.00888984 cpu_s=0.030878
+RANK rank=3 bodies=63 compute_s=0.0179992 comm_s=0.0129429 cpu_s=0.030952
+RANK rank=4 bodies=62 compute_s=0.0172628 comm_s=0.0136083 cpu_s=0.03088
+RANK rank=5 bodies=62 compute_s=0.0166284 comm_s=0.0143141 cpu_s=0.030952
+RANK rank=6 bodies=62 compute_s=0.0155465 comm_s=0.0153251 cpu_s=0.030881
+RANK rank=7 bodies=62 compute_s=0.0218175 comm_s=0.00912192 cpu_s=0.030717
+RESULT mode=mpi procs=8 bodies=500 steps=100 seed=42 compute_s=0.0241841 comm_s=0.0153251 total_s=0.0309514 cpu_s=0.030952
+---- MPI  bodies=1000  procs=1 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 1
+  bodies           : 1000
+  steps            : 100
+  seed             : 42
+  compute time (s) : 0.278646  (max over ranks)
+  comm time (s)    : 0.000413168  (max over ranks)
+  total time (s)   : 0.279071  (max over ranks)
+  cpu time (s)     : 0.278832  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n1000_p1_s100.csv
+RANK rank=0 bodies=1000 compute_s=0.278646 comm_s=0.000413168 cpu_s=0.278832
+RESULT mode=mpi procs=1 bodies=1000 steps=100 seed=42 compute_s=0.278646 comm_s=0.000413168 total_s=0.279071 cpu_s=0.278832
+---- MPI  bodies=1000  procs=2 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 2
+  bodies           : 1000
+  steps            : 100
+  seed             : 42
+  compute time (s) : 0.195179  (max over ranks)
+  comm time (s)    : 0.0221875  (max over ranks)
+  total time (s)   : 0.20984  (max over ranks)
+  cpu time (s)     : 0.20984  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n1000_p2_s100.csv
+RANK rank=0 bodies=500 compute_s=0.195179 comm_s=0.0146512 cpu_s=0.20984
+RANK rank=1 bodies=500 compute_s=0.187641 comm_s=0.0221875 cpu_s=0.209839
+RESULT mode=mpi procs=2 bodies=1000 steps=100 seed=42 compute_s=0.195179 comm_s=0.0221875 total_s=0.20984 cpu_s=0.20984
+---- MPI  bodies=1000  procs=4 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 4
+  bodies           : 1000
+  steps            : 100
+  seed             : 42
+  compute time (s) : 0.122445  (max over ranks)
+  comm time (s)    : 0.0262635  (max over ranks)
+  total time (s)   : 0.142586  (max over ranks)
+  cpu time (s)     : 0.142515  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n1000_p4_s100.csv
+RANK rank=0 bodies=250 compute_s=0.121622 comm_s=0.020954 cpu_s=0.142439
+RANK rank=1 bodies=250 compute_s=0.116306 comm_s=0.0262635 cpu_s=0.142407
+RANK rank=2 bodies=250 compute_s=0.122445 comm_s=0.0201252 cpu_s=0.142497
+RANK rank=3 bodies=250 compute_s=0.119917 comm_s=0.0226611 cpu_s=0.142515
+RESULT mode=mpi procs=4 bodies=1000 steps=100 seed=42 compute_s=0.122445 comm_s=0.0262635 total_s=0.142586 cpu_s=0.142515
+---- MPI  bodies=1000  procs=8 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 8
+  bodies           : 1000
+  steps            : 100
+  seed             : 42
+  compute time (s) : 0.0861481  (max over ranks)
+  comm time (s)    : 0.0601721  (max over ranks)
+  total time (s)   : 0.123301  (max over ranks)
+  cpu time (s)     : 0.123295  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n1000_p8_s100.csv
+RANK rank=0 bodies=125 compute_s=0.0861481 comm_s=0.03714 cpu_s=0.108305
+RANK rank=1 bodies=125 compute_s=0.0713784 comm_s=0.0519013 cpu_s=0.123289
+RANK rank=2 bodies=125 compute_s=0.063114 comm_s=0.0601721 cpu_s=0.123295
+RANK rank=3 bodies=125 compute_s=0.0753199 comm_s=0.0479565 cpu_s=0.123266
+RANK rank=4 bodies=125 compute_s=0.0682373 comm_s=0.0550493 cpu_s=0.123289
+RANK rank=5 bodies=125 compute_s=0.0838365 comm_s=0.0355851 cpu_s=0.105006
+RANK rank=6 bodies=125 compute_s=0.0774635 comm_s=0.0458212 cpu_s=0.123148
+RANK rank=7 bodies=125 compute_s=0.076664 comm_s=0.0421926 cpu_s=0.118353
+RESULT mode=mpi procs=8 bodies=1000 steps=100 seed=42 compute_s=0.0861481 comm_s=0.0601721 total_s=0.123301 cpu_s=0.123295
+---- MPI  bodies=5000  procs=1 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 1
+  bodies           : 5000
+  steps            : 100
+  seed             : 42
+  compute time (s) : 6.99097  (max over ranks)
+  comm time (s)    : 0.00365469  (max over ranks)
+  total time (s)   : 6.99465  (max over ranks)
+  cpu time (s)     : 6.98792  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n5000_p1_s100.csv
+RANK rank=0 bodies=5000 compute_s=6.99097 comm_s=0.00365469 cpu_s=6.98792
+RESULT mode=mpi procs=1 bodies=5000 steps=100 seed=42 compute_s=6.99097 comm_s=0.00365469 total_s=6.99465 cpu_s=6.98792
+---- MPI  bodies=5000  procs=2 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 2
+  bodies           : 5000
+  steps            : 100
+  seed             : 42
+  compute time (s) : 3.62206  (max over ranks)
+  comm time (s)    : 0.0414661  (max over ranks)
+  total time (s)   : 3.66101  (max over ranks)
+  cpu time (s)     : 3.661  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n5000_p2_s100.csv
+RANK rank=0 bodies=2500 compute_s=3.61953 comm_s=0.0414661 cpu_s=3.65733
+RANK rank=1 bodies=2500 compute_s=3.62206 comm_s=0.0389349 cpu_s=3.661
+RESULT mode=mpi procs=2 bodies=5000 steps=100 seed=42 compute_s=3.62206 comm_s=0.0414661 total_s=3.66101 cpu_s=3.661
+---- MPI  bodies=5000  procs=4 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 4
+  bodies           : 5000
+  steps            : 100
+  seed             : 42
+  compute time (s) : 2.91935  (max over ranks)
+  comm time (s)    : 0.619945  (max over ranks)
+  total time (s)   : 3.41562  (max over ranks)
+  cpu time (s)     : 3.41559  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n5000_p4_s100.csv
+RANK rank=0 bodies=1250 compute_s=2.86961 comm_s=0.545989 cpu_s=3.41537
+RANK rank=1 bodies=1250 compute_s=2.91935 comm_s=0.49624 cpu_s=3.41127
+RANK rank=2 bodies=1250 compute_s=2.79565 comm_s=0.619945 cpu_s=3.41559
+RANK rank=3 bodies=1250 compute_s=2.89029 comm_s=0.525141 cpu_s=3.41498
+RESULT mode=mpi procs=4 bodies=5000 steps=100 seed=42 compute_s=2.91935 comm_s=0.619945 total_s=3.41562 cpu_s=3.41559
+---- MPI  bodies=5000  procs=8 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 8
+  bodies           : 5000
+  steps            : 100
+  seed             : 42
+  compute time (s) : 1.87141  (max over ranks)
+  comm time (s)    : 0.535097  (max over ranks)
+  total time (s)   : 2.25992  (max over ranks)
+  cpu time (s)     : 2.25964  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n5000_p8_s100.csv
+RANK rank=0 bodies=625 compute_s=1.76221 comm_s=0.497603 cpu_s=2.25702
+RANK rank=1 bodies=625 compute_s=1.84149 comm_s=0.418416 cpu_s=2.25961
+RANK rank=2 bodies=625 compute_s=1.86182 comm_s=0.397968 cpu_s=2.25964
+RANK rank=3 bodies=625 compute_s=1.84687 comm_s=0.413013 cpu_s=2.25964
+RANK rank=4 bodies=625 compute_s=1.87141 comm_s=0.388415 cpu_s=2.25491
+RANK rank=5 bodies=625 compute_s=1.72481 comm_s=0.535097 cpu_s=2.25635
+RANK rank=6 bodies=625 compute_s=1.82101 comm_s=0.438763 cpu_s=2.24148
+RANK rank=7 bodies=625 compute_s=1.86895 comm_s=0.390931 cpu_s=2.24045
+RESULT mode=mpi procs=8 bodies=5000 steps=100 seed=42 compute_s=1.87141 comm_s=0.535097 total_s=2.25992 cpu_s=2.25964
+---- MPI  bodies=10000  procs=1 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 1
+  bodies           : 10000
+  steps            : 100
+  seed             : 42
+  compute time (s) : 31.1777  (max over ranks)
+  comm time (s)    : 0.00598562  (max over ranks)
+  total time (s)   : 31.1837  (max over ranks)
+  cpu time (s)     : 31.1549  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n10000_p1_s100.csv
+RANK rank=0 bodies=10000 compute_s=31.1777 comm_s=0.00598562 cpu_s=31.1549
+RESULT mode=mpi procs=1 bodies=10000 steps=100 seed=42 compute_s=31.1777 comm_s=0.00598562 total_s=31.1837 cpu_s=31.1549
+---- MPI  bodies=10000  procs=2 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 2
+  bodies           : 10000
+  steps            : 100
+  seed             : 42
+  compute time (s) : 19.3878  (max over ranks)
+  comm time (s)    : 0.346499  (max over ranks)
+  total time (s)   : 19.5188  (max over ranks)
+  cpu time (s)     : 19.5125  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n10000_p2_s100.csv
+RANK rank=0 bodies=5000 compute_s=19.1723 comm_s=0.346499 cpu_s=19.5072
+RANK rank=1 bodies=5000 compute_s=19.3878 comm_s=0.130961 cpu_s=19.5125
+RESULT mode=mpi procs=2 bodies=10000 steps=100 seed=42 compute_s=19.3878 comm_s=0.346499 total_s=19.5188 cpu_s=19.5125
+---- MPI  bodies=10000  procs=4 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 4
+  bodies           : 10000
+  steps            : 100
+  seed             : 42
+  compute time (s) : 12.5545  (max over ranks)
+  comm time (s)    : 2.73146  (max over ranks)
+  total time (s)   : 14.3585  (max over ranks)
+  cpu time (s)     : 14.358  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n10000_p4_s100.csv
+RANK rank=0 bodies=2500 compute_s=12.006 comm_s=2.35248 cpu_s=14.3441
+RANK rank=1 bodies=2500 compute_s=11.627 comm_s=2.73146 cpu_s=14.338
+RANK rank=2 bodies=2500 compute_s=12.4147 comm_s=1.94381 cpu_s=14.358
+RANK rank=3 bodies=2500 compute_s=12.5545 comm_s=1.80395 cpu_s=14.3553
+RESULT mode=mpi procs=4 bodies=10000 steps=100 seed=42 compute_s=12.5545 comm_s=2.73146 total_s=14.3585 cpu_s=14.358
+---- MPI  bodies=10000  procs=8 ----
+Wrote real communication log: results/raw/mpi_comm_log.csv
+MPI N body simulation
+  processes        : 8
+  bodies           : 10000
+  steps            : 100
+  seed             : 42
+  compute time (s) : 8.96646  (max over ranks)
+  comm time (s)    : 2.21802  (max over ranks)
+  total time (s)   : 10.4043  (max over ranks)
+  cpu time (s)     : 10.3905  (max over ranks)
+  final state      : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/raw/final_mpi_n10000_p8_s100.csv
+RANK rank=0 bodies=1250 compute_s=8.18622 comm_s=2.21802 cpu_s=10.3223
+RANK rank=1 bodies=1250 compute_s=8.18205 comm_s=2.21126 cpu_s=10.3905
+RANK rank=2 bodies=1250 compute_s=8.48367 comm_s=1.92055 cpu_s=10.3342
+RANK rank=3 bodies=1250 compute_s=8.96646 comm_s=1.42673 cpu_s=10.2143
+RANK rank=4 bodies=1250 compute_s=8.50563 comm_s=1.8986 cpu_s=10.3004
+RANK rank=5 bodies=1250 compute_s=8.46395 comm_s=1.92939 cpu_s=10.176
+RANK rank=6 bodies=1250 compute_s=8.62375 comm_s=1.77988 cpu_s=10.3778
+RANK rank=7 bodies=1250 compute_s=8.61043 comm_s=1.78278 cpu_s=10.1601
+RESULT mode=mpi procs=8 bodies=10000 steps=100 seed=42 compute_s=8.96646 comm_s=2.21802 total_s=10.4043 cpu_s=10.3905
+
+Results CSV : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/processed/experiment_results.csv
+Full log    : /home/fatima/dc_lab/DC CCP/distributed_nbody_simulation/results/experiment_logs/run_20261108_220300.log
+Next: python3 scripts/plot_results.py
